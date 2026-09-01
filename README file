@@ -1,0 +1,137 @@
+# 🤖 LangGraph + Streamlit AI Chatbot
+
+A simple AI chatbot built using **LangGraph**, **Groq Llama 3.3 70B**, and **Streamlit**. The chatbot supports real-time streaming responses, conversation memory, and multiple chat threads.
+
+---
+
+## Features Completed
+
+### ✅ LangGraph Backend
+- Created a `StateGraph`
+- Defined the `ChatState`
+- Added a chat node
+- Connected `START → chat_node → END`
+- Compiled the graph using `InMemorySaver`
+
+---
+
+### ✅ Groq Integration
+- Loaded the Groq API key from the `.env` file
+- Connected the chatbot with the Groq Llama 3.3 70B model
+- Generated AI responses using LangGraph
+
+---
+
+### ✅ Streamlit Interface
+- Built a clean chatbot UI
+- Added a chat input box
+- Displayed user and assistant messages
+- Used Streamlit chat components
+
+---
+
+### ✅ Chat History
+- Stored conversation history using `st.session_state`
+- Reloaded previous messages whenever the app reruns
+
+---
+
+### ✅ LangGraph Integration
+- Sent user messages to LangGraph
+- Received AI responses
+- Displayed responses in the Streamlit interface
+
+---
+
+### ✅ Streaming Responses
+- Used `chatbot.stream()`
+- Displayed responses using `st.write_stream()`
+- AI responses are shown word by word for a better user experience
+
+---
+
+### ✅ Thread Support
+- Used LangGraph thread IDs
+- Each conversation runs in its own thread
+- Makes conversation memory independent for every chat
+
+---
+
+# 🚀 Next Features
+
+## Sidebar
+Create a sidebar containing:
+
+- 🤖 AI Chatbot
+- ➕ New Chat button
+- **My Conversations** section
+
+---
+
+## Dynamic Thread IDs
+- Generate a unique `thread_id` for every new conversation
+- Save the thread ID in `st.session_state`
+- Display the current thread ID in the sidebar
+
+---
+
+## New Chat
+When the user clicks **New Chat**:
+
+- Generate a new thread ID
+- Save it in the session
+- Clear the current chat history
+- Start a fresh conversation
+
+---
+
+## Conversation List
+- Store every generated thread ID
+- Display all thread IDs in the sidebar
+
+Example:
+
+- thread-1
+- thread-2
+- thread-3
+
+---
+
+## Switch Between Conversations
+- Convert each thread ID into a clickable button
+- Load the selected conversation
+- Continue chatting from the previous state
+
+---
+
+## Final Goal
+
+After completing all the features, the chatbot will support:
+
+- ✅ LangGraph StateGraph
+- ✅ Groq Llama 3.3 70B
+- ✅ Streamlit Chat Interface
+- ✅ Chat History
+- ✅ Streaming Responses
+- ✅ Thread-Based Memory
+- ✅ New Chat
+- ✅ Multiple Conversations
+- ✅ Sidebar Navigation
+- ✅ Resume Previous Conversations
+
+---
+
+## Tech Stack
+
+- Python
+- LangGraph
+- LangChain
+- Groq
+- Streamlit
+- python-dotenv
+
+---
+
+## Project Status
+
+🚧 Currently under development. New features are being added step by step.
